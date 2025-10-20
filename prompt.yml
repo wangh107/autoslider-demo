@@ -1,0 +1,5 @@
+- output: t_ds_slide_ITT
+  prompt: "
+   Compare number of patients discontinue from study among groups A, B, C, be concise, 
+   focus on whether there are difference among the groups, less than 50 words
+  "

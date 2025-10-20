@@ -1,0 +1,10 @@
+SE:
+  title: Safety Evaluable Population
+  condition: SAFFL == "Y"
+  target: adsl
+  type: slref
+ITT:
+  title: Intent to Treat Population
+  condition: ITTFL =='Y'
+  target: adsl
+  type: slref

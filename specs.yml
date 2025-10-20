@@ -1,0 +1,14 @@
+- program: t_dm_slide
+  titles: Demographic and Baseline Characteristics
+  footnotes: ''
+  paper: L6
+  suffix: SE
+  args:
+    arm: "TRT01P"
+    vars: ["AGE", "SEX"]
+    stats: ["median", "range", "count_fraction"]
+- program: t_ds_slide
+  titles: Patient Disposition ({filter_titles("adsl")})
+  footnotes: 't_ds footnotes'
+  paper: L6
+  suffix: ITT
