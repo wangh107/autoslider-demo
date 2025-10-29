@@ -19,14 +19,8 @@ data <- list(
 
 # create outputs based on the specs and the functions
 outputs <- spec_file %>%
-  read_spec() %>%
-  # we can also filter for specific programs, if we don't want to create them all
-  filter_spec(., program %in% c(
-    "t_ds_slide",
-    "t_dm_slide"
-  )) %>%
-  # these filtered specs are now piped into the generate_outputs function.
-  # this function also requires the data
+  read_spec() %>%  
+  # generate_outputs function requires the data and spec
   generate_outputs(datasets = data) %>%
   # now we decorate based on the specs, i.e. add footnotes and titles
   decorate_outputs(
@@ -44,6 +38,7 @@ outputs %>%
 prompt_list <- get_prompt_list("prompt.yml")
 outputs <-  spec_file %>%
   read_spec() %>%
+  # we can also filter for specific programs, if we don't want to create them all
   filter_spec(., program %in% c("t_ds_slide")) %>%
   generate_outputs(datasets = data) %>%
   decorate_outputs()
